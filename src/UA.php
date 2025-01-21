@@ -29,13 +29,18 @@ class UA
      */
     public static function getModel(string $ua): string|null
     {
+        // Standard model
+        if(preg_match('/(?<=;\s)[^;]+(?=Build)/U', $ua, $matches)) {
+            return trim($matches[0]);
+        }
+
         // iPhone model
         if(preg_match('/iPhone OS.*(?=like)/U', $ua, $matches)) {
             return trim($matches[0]);
         }
 
-        // Other model
-        if(preg_match('/(?<=;\s)[^;]+(?=Build)/U', $ua, $matches)) {
+        // MIUI model
+        if(preg_match('/(?<=;\s)[^;]+(?=MIUI)/U', $ua, $matches)) {
             return trim($matches[0]);
         }
 
