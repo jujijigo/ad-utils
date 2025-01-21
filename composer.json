@@ -1,0 +1,17 @@
+{
+  "name": "jujijigo/ad-utils",
+  "description": "A ad utils component.",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "ad"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Jujijigo\\AdUtils\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
